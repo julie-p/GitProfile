@@ -10,6 +10,7 @@ function Form(props) {
 
         axios.get(`https://api.github.com/users/${username}`)
         .then((resp) => {
+            console.log(resp.data);
             props.onSubmit(resp.data);
             setUsername('');
         })
